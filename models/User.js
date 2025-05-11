@@ -1,5 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database.js';
+// import Placemark from './Placemark.js';
+// import UserPlacemark from './UserPlacemark.js';
 
 const User = sequelize.define('User', {
   name: {
@@ -18,5 +20,8 @@ const User = sequelize.define('User', {
 }, {
   timestamps: true,
 });
+
+// User.belongsToMany(Placemark, { through: UserPlacemark });
+// Placemark.belongsToMany(User, { through: UserPlacemark });
 
 export default User;

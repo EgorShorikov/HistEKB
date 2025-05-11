@@ -1,22 +1,19 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database.js';
 
-const Achievement = sequelize.define('Achievement', {
+const Placemark = sequelize.define('Placemark', {
   coordinates: {
-    type: DataTypes.GEOGRAPHY,
+    type: DataTypes.JSON, 
     allowNull: false,
   },
-
   name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
   description: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
   achievement: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -25,4 +22,4 @@ const Achievement = sequelize.define('Achievement', {
   timestamps: true,
 });
 
-export default Achievement;
+export default Placemark;

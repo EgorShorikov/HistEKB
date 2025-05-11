@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 1920px;
+    height: 2873px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 190px;
+    background: #b52121;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 298px;
+}
+
+.logo {
+    width: 136px;
+    height: 136px;
+    background: #E26F6F;
+    border-radius: 50%;
+    margin-right: 182px;
+}
+
+.site-title {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 92px;
+    color: #000000;
+    margin: 0;
+}
+
+.nav-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 125px;
+    background: #E26F6F;
+    top: 230px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 275px;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hero-rectangle {
+    position: absolute;
+    width: 1323px;
+    height: 445px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/ekb.png);
+    background-size: cover;
+    border-radius: 15px;
+    top: 486px;
+    left: 298px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 92px;
+    margin: 0 0 20px 0;
+}
+
+.hero-subtitle {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 92px;
+    margin: 0 0 53px 0;
+}
+
+.hero-button {
+    width: 240px;
+    height: 72px;
+    background: rgba(217, 217, 217, 0.7);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border: none;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.divider {
+    position: absolute;
+    width: 200px;
+    height: 0;
+    border: 4px solid #000000;
+    top: 1141px;
+    left: 860px;
+}
+
+.map-title-rectangle {
+    position: absolute;
+    width: 1322px;
+    height: 190px;
+    top: 1099px;
+    left: 298px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.map-title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 69px;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+}
+
+.map-content {
+    position: absolute;
+    top: 1457px;
+    left: 299px;
+    display: flex;
+    gap: 35px;
+}
+
+.map-rectangle {
+    width: 834px;
+    height: 688px;
+    background: url(../images/map.png);
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.widget-rectangle {
+    width: 451.93px;
+    height: 688px;
+    background: url(../images/widget.png);
+    background-size: cover;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.action-button-rectangle {
+    position: absolute;
+    top: 2001px;
+    right: 425px;
+}
+
+.map-action-button {
+    width: 281px;
+    height: 72px;
+    background: rgba(217, 217, 217, 0.7);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border: none;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 688px;
+    background: #2E2736;
+    top: 2185px;
+    left: 0;
+}
+
+.footer-contacts {
+    position: absolute;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: right;
+    color: #FFFFFF;
+    right: 297px;
+    top: 269px;
+}
+
+.copyright {
+    position: absolute;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: right;
+    color: #FFFFFF;
+    right: 1309px;
+    top: 307px;
+}
+
+@media screen and (max-width: 1919px) {
+    body {
+        overflow-x: auto;
+    }
+    
+    .main-container {
+        min-width: 1920px;
+    }
+}
