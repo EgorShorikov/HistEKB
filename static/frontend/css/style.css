@@ -6,12 +6,15 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 .page-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .main-container {
@@ -25,7 +28,7 @@ body {
     position: absolute;
     width: 100%;
     height: 190px;
-    background: #b52121;
+    background: #ffffff;
     top: 0;
     left: 0;
     display: flex;
@@ -35,8 +38,8 @@ body {
 
 .logo {
     width: 136px;
-    height: 136px;
-    background: #E26F6F;
+    height: auto;
+    background: url(../../frontend/images/logo.png);
     border-radius: 50%;
     margin-right: 182px;
 }
@@ -53,7 +56,7 @@ body {
     position: absolute;
     width: 100%;
     height: 125px;
-    background: #E26F6F;
+    background: #ffffff;
     top: 230px;
     left: 0;
     display: flex;
@@ -69,13 +72,38 @@ body {
     color: #000000;
     text-decoration: none;
     white-space: nowrap;
+    position: relative;
+    padding: 10px 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-item:hover {
+    color: #232323;
+    transform: translateY(-3px);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #000000;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 80%;
 }
 
 .hero-rectangle {
     position: absolute;
     width: 1323px;
     height: 445px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/ekb.png);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/static/frontend/images/ekb.png);
     background-size: cover;
     border-radius: 15px;
     top: 486px;
@@ -114,6 +142,12 @@ body {
     line-height: 46px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
 }
 
 .divider {
@@ -153,27 +187,43 @@ body {
     gap: 35px;
 }
 
-.map-rectangle {
+.map-iframe {
     width: 834px;
-    height: 688px;
-    background: url(../images/map.png);
-    background-size: cover;
+    height: 700px;
     border-radius: 15px;
+    border: none;
 }
 
 .widget-rectangle {
     width: 451.93px;
-    height: 688px;
-    background: url(../images/widget.png);
+    height: 660px;
+    background: url(/static/frontend/images/widget.png) no-repeat center center;
     background-size: cover;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 10;
+    transition: background-image 0.3s ease;
+}
+
+.widget-rectangle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 15px;
+    z-index: 1;
 }
 
 .widget-text {
+    position: relative;
+    z-index: 2;
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -181,12 +231,14 @@ body {
     word-wrap: break-word;
     max-height: 100%;
     overflow: auto;
+    z-index: 11;
 }
 
 .action-button-rectangle {
     position: absolute;
     top: 2001px;
-    right: 425px;
+    right: 360px;
+    z-index: 1000;
 }
 
 .map-action-button {
@@ -201,14 +253,22 @@ body {
     line-height: 46px;
     color: #FFFFFF;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.map-action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
 }
 
 .footer-rectangle {
     position: absolute;
     width: 100%;
-    height: 688px;
-    background: #2E2736;
-    top: 2185px;
+    height: 600px;
+    background: #232323;
+    top: 2273px;
     left: 0;
 }
 
@@ -232,6 +292,17 @@ body {
     color: #FFFFFF;
     right: 1309px;
     top: 307px;
+}
+
+@media screen and (max-width: 768px) {
+    .map-content {
+        flex-direction: column;
+    }
+    
+    .map-iframe {
+        width: 100%;
+        height: 400px;
+    }
 }
 
 @media screen and (max-width: 1919px) {

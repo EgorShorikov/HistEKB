@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HistEKB - Изучай историю Екатеринбурга</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/static/frontend/css/style.css">
 </head>
 <body>
     <div class="page-wrapper">
         <div class="main-container">
             <header class="header">
                 <div class="header-rectangle">
-                    <div class="logo"></div>
+                    <img src="../frontend/images/logo.png" alt="Логотип" class="logo">
                     <h1 class="site-title">HistEKB</h1>
                 </div>
             </header>
@@ -41,9 +41,17 @@
                 </div>
                 
                 <div class="map-content">
-                    <div class="map-rectangle"></div>
+                    <iframe 
+                        src="/map/initialMap.html" 
+                        class="map-iframe"
+                        id="yandex-map-iframe"
+                        allowfullscreen
+                        loading="eager">
+                    </iframe>
                     <div class="widget-rectangle">
-                        <div class="widget-text">ОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕОПИСАНИЕ</div>
+                        <div class="widget-text" id="map-description">
+                            Нажмите на метку карты, чтобы узнать информацию
+                        </div>
                     </div>
                 </div>
                 
@@ -60,6 +68,6 @@
             </footer>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="/static/frontend/js/script.js"></script>
 </body>
 </html>
