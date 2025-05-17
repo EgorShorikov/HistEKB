@@ -24,12 +24,24 @@ app.use('/map', express.static(path.join(__dirname, 'static/map')));
 
 app.use('/api', authRoutes);
 
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'static/html/register.html'));
+});
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'static/html/login.html'));
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'static/frontend/index.html'));
 });
 
 app.get('/map', (req, res) => {
     res.sendFile(path.join(__dirname, 'static/map/initialMap.html'));
+});
+
+app.get('/family-album', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static/html/family-album.html'));
 });
 
 try {

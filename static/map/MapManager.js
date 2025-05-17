@@ -24,18 +24,25 @@ class MapManager {
         const landmarks = [
             {
                 id: 1,
-                coords: [56.8379, 60.5974],
+                coords: [56.8380, 60.5973],
                 title: "Площадь 1905 года",
                 description: "Центральная площадь города",
-                imageUrl: "/static/frontend/images/landmark1.jpeg"
+                imageUrl: "/static/frontend/images/landmark2.jpg"
             },
             {
                 id: 2,
-                coords: [56.8431, 60.6454],
+                coords: [56.8377, 60.6037],
                 title: "Плотина Городского пруда",
                 description: "Историческая плотина на реке Исеть",
-                imageUrl: "/static/frontend/images/landmark2.jpg"
-            }
+                imageUrl: "/static/frontend/images/widget.png"
+            },
+            {
+                id: 3,
+                coords: [56.8444, 60.6088],
+                title: "Храм на крови",
+                description: "Место, где был убит последний российский император Николай II и его семья",
+                imageUrl: "/static/frontend/images/landmark1.jpeg"
+            },
         ];
 
         landmarks.forEach(landmark => {

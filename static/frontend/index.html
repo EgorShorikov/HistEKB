@@ -14,6 +14,7 @@
                 <div class="header-rectangle">
                     <img src="../frontend/images/logo.png" alt="Логотип" class="logo">
                     <h1 class="site-title">HistEKB</h1>
+                    <div class="profile-info" id="profileInfo"></div>
                 </div>
             </header>
 
@@ -56,7 +57,7 @@
                 </div>
                 
                 <div class="action-button-rectangle">
-                    <button class="map-action-button">Приступить!</button>
+                    <button class="map-action-button" id="openAlbumButton">Приступить!</button>
                 </div>
             </section>
 
@@ -68,6 +69,32 @@
             </footer>
         </div>
     </div>
-    <script src="/static/frontend/js/script.js"></script>
+    
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+
+        <h2>Храм на Крови</h2>
+
+        <div class="modal-full-text">
+            <h3>Николай II</h3>
+            <p>
+                Николай II — последний император России из династии Романовых, правил с 1894 по 1917 год.
+                Родился в 1868 году. Его правление ознаменовалось значительными внутренними и внешними кризисами:
+                революцией 1905 года, участием России в Первой мировой войне, экономическими трудностями и ростом недовольства в обществе.
+            </p>
+            <p>
+                В 1917 году был вынужден отречься от престола в результате Февральской революции.
+                После этого вместе с семьёй был арестован и в 1918 году расстрелян большевиками.
+                Николай II считается символом конца Российской империи и трагической эпохи в истории страны.
+            </p>
+        </div>
+
+        <div class="modal-image-frame"></div>
+
+        <div id="modalSwitch" class="modal-switch"><< Посмотреть о семье >></div>
+    </div>
+</div>
+<script src="/static/frontend/js/script.js"></script>
 </body>
 </html>
